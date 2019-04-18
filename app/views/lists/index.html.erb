@@ -1,0 +1,9 @@
+<% if user_signed_in? %> 
+  <h1>Welcome <%= current_user.email%> to the ToDoApp for Youse</h1>
+  <%= link_to "New List",  new_user_list_path(current_user.id) %> <br/>
+<% end %>
+
+<% @lists.each do |list| %>
+  <%= link_to(list.list_name, user_list_path(current_user, list.id)) %><br />
+<% end %>
+

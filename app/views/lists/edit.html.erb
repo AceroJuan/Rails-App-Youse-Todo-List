@@ -1,0 +1,11 @@
+<h1> Your new To Do List</h1>
+
+<%= form_for [current_user, @list] do |l| %>
+  
+  <%= l.text_field :list_name, placeholder: "List Name" %>
+
+  <%= l.text_area :description, placeholder: "Description" %>
+      
+  <%= l.submit 'save', data:{confirm: 'save this data?'}  %>
+  <%= link_to 'Back', user_list_path(current_user, @list.id) %>
+<% end %>

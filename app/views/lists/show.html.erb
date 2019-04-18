@@ -1,0 +1,6 @@
+<%= @list.list_name %>
+<%= @list.description %>
+
+<%= link_to "Edit your list data", edit_user_list_path(current_user.id) %>
+<%= link_to "Erase your list data", user_list_path(current_user.id), method: :delete, data:{confirm: "You want to delete this list?"} %>
+<%= link_to "Back", user_lists_path %>
