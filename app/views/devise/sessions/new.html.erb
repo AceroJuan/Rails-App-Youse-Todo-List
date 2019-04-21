@@ -4,11 +4,10 @@
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       
-        <label for="email">Log in</label>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", type: "text", placeholder: "Enter Email" %>
+        <label for="email"><b>Log in</b></label>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", type: "text", placeholder: "Enter your email" %>
       
-        <label for="psw">Password</label>
-        <%= f.password_field :password, autocomplete: "current-password", type: "password", placeholder: "Enter Password" %>
+        <%= f.password_field :password, autocomplete: "current-password", type: "password", placeholder: "Enter your password" %>
       
       <% if devise_mapping.rememberable? %>
           <%= f.check_box :remember_me %>
