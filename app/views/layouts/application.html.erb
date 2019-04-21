@@ -11,7 +11,7 @@
   </head>
 
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light text-right ">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="/"><%= image_tag("youse_logo.png", size: "130x30", alt: "Youse") %></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,18 +24,14 @@
             <% if user_signed_in? %>
               <%= link_to 'Edit profile', edit_user_registration_path, :class => "nav-link" %>
               <%= link_to "Logout", destroy_user_session_path, :class => "nav-link", method: :delete %>
+               <li class="nav-link right">Welcome <%= current_user.email%></li>
             <% else %>
               <%= link_to "Sign up", new_user_registration_path, :class => "nav-link" %>
               <%= link_to "Login", new_user_session_path, :class => "nav-link" %>
             <% end %>
           </ul>
         </div>
-      </nav>
-      <% if user_signed_in? %>
-        Welcome <%= current_user.email%> to the Youse ToDoApp <br />
-      <% end %>
+      </nav><br />
       <%= yield %>
-
   </body>
-   <footer>Elaborado por Juan Acero como prueba tecnica para Youse Colombia </footer>
 </html>
