@@ -20,6 +20,7 @@
 
     <p>
       <% if user_signed_in? %>
+        <h1>Welcome <%= current_user.email%> to the ToDoApp for Youse</h1>
         <%= link_to 'Edit profile', edit_user_registration_path %> |
         <%= link_to "Logout", destroy_user_session_path, method: :delete %>
       <% else %>

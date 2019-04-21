@@ -1,6 +1,12 @@
-<%= @list.list_name %>
-<%= @list.description %>
+<h2> lista: <%= @list.list_name %> </h2>
+<p> Descripción: <%= @list.description %> </p>
 
-<%= link_to "Edit your list data", edit_user_list_path(current_user.id) %>
-<%= link_to "Erase your list data", user_list_path(current_user.id), method: :delete, data:{confirm: "You want to delete this list?"} %>
+<h2>Tareas Pendientes</h2>
+
+<% @list.tasks.each do |task| %> <br />
+<%= link_to(task.task_name, user_list_task_path(current_user, @list, task.id)) %> <br /> <%= task.description %> <br />
+<% end %> <br /> 
+<%= link_to "Create a New Task", new_user_list_task_path(current_user.id, @list) %> <br />
+<%= link_to "Edit your list data", edit_user_list_path(current_user.id) %> <br />
+<%= link_to "Erase your list data", user_list_path(current_user.id), method: :delete, data:{confirm: "You want to delete this list?"} %> <br />
 <%= link_to "Back", user_lists_path %>

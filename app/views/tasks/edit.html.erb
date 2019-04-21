@@ -1,0 +1,11 @@
+<h1> Edit your Task</h1>
+
+<%= form_for [current_user, @list, @task] do |t| %>
+  
+  <%= t.text_field :task_name, placeholder: "Task Name" %>
+
+  <%= t.text_area :description, placeholder: "Description" %>
+      
+  <%= t.submit 'save', data:{confirm: 'save this data?'}  %>
+  <%= link_to 'Back', user_list_task_path(current_user, @list, @task) %>
+<% end %>

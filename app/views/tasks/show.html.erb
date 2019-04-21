@@ -1,0 +1,6 @@
+<h2>Tarea: <%= @task.task_name %></h2>
+<h3>Descripcion: <%= @task.description %></h3> <br />
+
+<%= link_to "Edit your task data",  edit_user_list_task_path(current_user.id) %>
+<%= link_to "Erase your task data", user_list_task_path(current_user.id), method: :delete, data:{confirm: "You want to delete this task?"} %>
+<%= link_to "Back", user_list_path(current_user, @list.id) %>
