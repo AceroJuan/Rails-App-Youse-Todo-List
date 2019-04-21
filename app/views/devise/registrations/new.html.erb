@@ -1,0 +1,22 @@
+<div class="other_img">
+  <div class="form_container">
+    <a class="navbar-brand"><%= image_tag("youse_logo.png", size: "130x30", alt: "Youse") %></a>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <label for="email"><b>Sign up</b></label>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", type: "text", placeholder: "Enter your email" %>
+    
+      <%= f.password_field :password, autocomplete: "new-password", type: "password", placeholder: "Enter Password (6 characters minimum)" %>
+    
+      <%= f.password_field :password, autocomplete: "new-password", type: "password", placeholder: "Confirm your Password" %>
+      
+      <h6>Have an account?  <a href="/users/sign_in">Log in</a></h6>
+      <div class="actions">
+        <%= f.submit "Sign up", class: "btn"  %>
+        <a class="btn" href="/">Back</a>  
+      </div>
+    <% end %>
+  </div>
+</div>

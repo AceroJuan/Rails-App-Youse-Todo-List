@@ -12,3 +12,132 @@
  *
  */
  @import "bootstrap";
+
+ body, html {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+ .navbar {
+  width: 100vw;
+  position: top;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 10px 10px -6px #777;
+}
+.navbar-nav {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  padding: 0px 12px;
+  text-decoration: none;
+}
+.nav-link {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  border: none;
+  padding: 6px 16px;
+  font-size: 16px;
+  text-align: center;
+}
+.nav-link:hover {
+  background-color: #46474713;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.welcome_img {
+  /* The image used */
+  background-image: url("youse_banner_01.jpg");
+
+  /* Control the height of the image */
+  min-height: 580px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.other_img {
+  /* The image used */
+  background-image: url("youse_banner02.jpg");
+
+  /* Control the height of the image */
+  min-height: 655px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+footer {
+  background-color: #8d8d8d;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  padding: 10px 12px;
+  height: 39px;
+  width: 100%;
+  z-index: 100;
+}
+/* Add styles to the form container */
+.form_container {
+  display: flex;
+  position: absolute;
+  margin: 100px 0 0 400px;
+  max-width: 500px;
+  padding: 20px 0 20px 20px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 90%;
+  padding: 5px;
+  margin: 2px 20px 15px 0;
+  border: none;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #673CA1;
+  color: white;
+  padding: 4px 5px;
+  border-radius: 0%;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+  margin: 10px 5px 0 0;
+}
+.btn:hover {
+  opacity: 1;
+  color: white;
+  text-decoration: none;
+}
+.btn2 {
+  background-color: #673CA1;
+  color: white;
+  padding: 4px 5px;
+  border-radius: 0%;
+  cursor: pointer;
+  width: 90%;
+  opacity: 0.9;
+  margin: 10px 5px 0 0;
+}
+.btn2:hover {
+  opacity: 1;
+  color: white;
+  text-decoration: none;
+}
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}

@@ -1,0 +1,29 @@
+<div class="other_img">
+  <div class="form_container">
+    <a class="navbar-brand"><%= image_tag("youse_logo.png", size: "130x30", alt: "Youse") %></a>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      
+        <label for="email">Log in</label>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", type: "text", placeholder: "Enter Email" %>
+      
+        <label for="psw">Password</label>
+        <%= f.password_field :password, autocomplete: "current-password", type: "password", placeholder: "Enter Password" %>
+      
+      <% if devise_mapping.rememberable? %>
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+      <% end %>
+    <h6>Don't have an account?  <a href="/users/sign_up">Make one</a></h6>
+    <h6> <a href="/users/password/new">Forgot your password?</a> </h6>
+    <div class="actions">
+      <%= f.submit "Log in", class: "btn" %>
+      <a class="btn" href="/">Back</a>  
+    </div>
+  <% end %>
+  </div>
+</div>
+
+ 
+
+  
