@@ -33,8 +33,8 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'b
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do # <<<< :development, not devlopment
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+# Call 'byebug' anywhere in the code to stop execution and get a debugger console
+gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
 end
@@ -44,9 +44,9 @@ end
 #   gem 'web-console', '>= 3.3.0'
 # end
 
-group :production do
-  gem 'pg'
-end 
+# group :production do
+#   gem 'pg'
+# end 
 
 
 group :test do
