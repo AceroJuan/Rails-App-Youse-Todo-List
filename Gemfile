@@ -44,9 +44,9 @@ end
 #   gem 'web-console', '>= 3.3.0'
 # end
 
-# group :production do
-#   gem 'pg'
-# end 
+group :production do
+  gem 'pg'
+end 
 
 
 group :test do
