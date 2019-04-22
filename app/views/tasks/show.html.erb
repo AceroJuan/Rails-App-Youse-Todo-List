@@ -2,7 +2,7 @@
   <div class="list_task_container">
     <h2><%= @task.task_name %></h2>
     <div class="actions">
-    <% if @task.completed_at? %>
+    <% if @task.completed_at %>
       <div class="task">
         <p style="opacity: 0.4;"><strike><%= @task.description %></strike></p>
       </div>
