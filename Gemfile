@@ -44,10 +44,10 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
-=begin group :production do
+group :production do
   gem 'pg'
 end 
-=end
+
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
