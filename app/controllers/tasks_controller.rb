@@ -34,7 +34,7 @@ class TasksController < ApplicationController
 
   def complete
     @task = Task.find(params[:id]) 
-    task.update_attribute(:completed_at, Time.now)
+    @task.update_attribute(:completed_at, Time.now)
     redirect_to user_list_task_path(current_user, @list, @task.id)
   end
 
