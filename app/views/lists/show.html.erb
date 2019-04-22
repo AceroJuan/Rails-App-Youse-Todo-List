@@ -1,12 +1,16 @@
-<h2> lista: <%= @list.list_name %> </h2>
-<p> Descripción: <%= @list.description %> </p>
-
-<h2>Tareas Pendientes</h2>
-
-<% @list.tasks.each do |task| %> <br />
-<%= link_to(task.task_name, user_list_task_path(current_user, @list, task.id)) %> <br /> <%= task.description %> <br />
-<% end %> <br /> 
-<%= link_to "Create a New Task", new_user_list_task_path(current_user.id, @list) %> <br />
-<%= link_to "Edit your list data", edit_user_list_path(current_user.id) %> <br />
-<%= link_to "Erase your list data", user_list_path(current_user.id), method: :delete, data:{confirm: "You want to delete this list?"} %> <br />
-<%= link_to "Back", user_lists_path %>
+<div class="list_task_img">
+  <div class="list_task_container">
+    <h3><%= @list.list_name %> </h3 >
+    <p> Description: <%= @list.description %> </p>
+    <h3>Pending Tasks</h3>
+    <% @list.tasks.each do |task| %>
+    <%= link_to(task.task_name, user_list_task_path(current_user, @list, task.id)) %>
+    <% end %> 
+    <%= link_to "Create a new task on this list", new_user_list_task_path(current_user.id, @list), class: "btn1" %> <br/>
+    <div class="actions">
+      <%= link_to "Edit your list data", edit_user_list_path(current_user.id), class: "btn2" %>
+      <%= link_to "Erase this list", user_list_path(current_user.id), method: :delete, data:{confirm: "You want to delete this list?"}, class: "btn2" %>
+    </div>
+    <%= link_to "Back", user_lists_path, class:"btn" %>
+  </div>
+</div>  

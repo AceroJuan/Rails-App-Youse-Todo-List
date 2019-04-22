@@ -22,9 +22,10 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <% if user_signed_in? %>
+              <%= link_to "Your Lists", user_lists_path(current_user), class: "nav-link" %>
               <%= link_to 'Edit profile', edit_user_registration_path, :class => "nav-link" %>
               <%= link_to "Logout", destroy_user_session_path, :class => "nav-link", method: :delete %>
-               <li class="nav-link right">Welcome <%= current_user.email%></li>
+              <li class="nav-link">Welcome <%= current_user.email%></li>
             <% else %>
               <%= link_to "Sign up", new_user_registration_path, :class => "nav-link" %>
               <%= link_to "Login", new_user_session_path, :class => "nav-link" %>

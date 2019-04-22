@@ -1,6 +1,11 @@
-<h2>Tarea: <%= @task.task_name %></h2>
-<h3>Descripcion: <%= @task.description %></h3> <br />
-
-<%= link_to "Edit your task data",  edit_user_list_task_path(current_user.id) %>
-<%= link_to "Erase your task data", user_list_task_path(current_user.id), method: :delete, data:{confirm: "You want to delete this task?"} %>
-<%= link_to "Back", user_list_path(current_user, @list.id) %>
+<div class="task_img">
+  <div class="list_task_container">
+    <h2><%= @task.task_name %></h2>
+    <p>Description: <%= @task.description %></p> <br />
+    <div class="actions">
+      <%= link_to "Edit your task data",  edit_user_list_task_path(current_user.id), class: "btn2"%>
+      <%= link_to "Erase your task data", user_list_task_path(current_user.id), method: :delete, data:{confirm: "You want to delete this task?"}, class: "btn2"%>
+    </div>
+    <%= link_to "back", user_list_path(current_user, @list.id), class: "btn" %>
+  </div>
+</div> 

@@ -1,11 +1,11 @@
-<h1> Your new Task</h1>
-
-<%= form_for [current_user, @list, Task.new] do |f| %>
-
- <%= f.text_field :task_name, placeholder: "Task Name" %>
- 
- <%= f.text_area :description, placeholder: "Description" %>
- 
- <%= f.submit 'save', data:{confirm: 'save this data?'}  %>
-
-<% end %>
+<div class="task_img">
+  <div class="list_task_container">
+    <h2> New task </h2>
+    <%= form_for [current_user, @list, Task.new] do |f| %>
+    <%= f.text_field :task_name, placeholder: "Put your task name here" %>
+    <%= f.text_area :description, placeholder: "Description about the task", class: "small-textarea" %>
+    <%= f.submit 'save', data:{confirm: 'save this data?'}, class: "btn"  %>
+    <%= link_to "back", user_list_path(current_user, @list.id), class: "btn" %>
+    <% end %> 
+  </div>
+</div> 

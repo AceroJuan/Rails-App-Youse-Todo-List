@@ -1,11 +1,11 @@
-<h1> Your new To Do List</h1>
-
-<%= form_for [current_user, @list] do |l| %>
-  
-  <%= l.text_field :list_name, placeholder: "List Name" %>
-
-  <%= l.text_area :description, placeholder: "Description" %>
-      
-  <%= l.submit 'save', data:{confirm: 'save this data?'}  %>
-  <%= link_to 'Back', user_list_path(current_user, @list.id) %>
-<% end %>
+<div class="list_task_img">
+  <div class="list_task_container">
+    <h2> Edit your to do list</h2>
+    <%= form_for [current_user, @list] do |l| %>
+    <%= l.text_field :list_name, placeholder: "Put your list name here" %>
+    <%= l.text_area :description, placeholder: "Need a clue about your list? put it here!", class: "small-textarea" %><br />
+    <%= l.submit 'save', data:{confirm: 'save this data?'}, class: "btn"  %>
+    <%= link_to 'Back', user_list_path(current_user, @list.id), class: "btn" %>
+    <% end %>
+  </div>
+</div> 

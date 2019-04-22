@@ -58,6 +58,24 @@
   background-size: cover;
   position: relative;
 }
+.list_task_img {
+  background-image: image-url("youse_banner03.jpg");
+  min-height: 87vh;
+  min-width: 85vw;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.task_img {
+  background-image: image-url("youse_banner04.jpg");
+  min-height: 87vh;
+  min-width: 85vw;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 .other_img {
   background-image: image-url("youse_banner02.jpg");
   min-height: 87vh;
@@ -83,6 +101,23 @@
   padding: 20px 0 30px 20px;
   background-color: white;
 }
+.list_task_container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0 400px;
+  max-width: 542px;
+  padding: 30px 30px 30px 30px;
+  background-color: white;
+  position: absolute;
+}
+.list_task ul {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  padding: 0px 12px;
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+}
 input[type=text], input[type=password] {
   width: 90%;
   padding: 5px;
@@ -107,6 +142,21 @@ input[type=text]:focus, input[type=password]:focus {
   color: white;
   text-decoration: none;
 }
+.btn1 {
+  background-color: #F89021;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 0%;
+  cursor: pointer;
+  width: 32vw;
+  opacity: 0.9;
+  margin: 20px 20px 0 0;
+}
+.btn1:hover {
+  opacity: 1;
+  color: white;
+  text-decoration: none;
+}
 .btn2 {
   background-color: #673CA1;
   color: white;
@@ -126,4 +176,8 @@ h6 {
   margin: 6px 0 0 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+}
+.small-textarea { 
+  height: 100px; 
+  width: 435px;
 }
