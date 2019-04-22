@@ -1,10 +1,29 @@
 <div class="task_img">
   <div class="list_task_container">
     <h2><%= @task.task_name %></h2>
-    <p>Description: <%= @task.description %></p> <br />
     <div class="actions">
+    <% if @task.completed_at? %>
+      <div class="task">
+        <p style="opacity: 0.4;"><strike><%= @task.description %></strike></p>
+      </div>
+      <div class="complete">
+        <%= link_to "Mark as Complete", complete_user_list_task_path(current_user.id, @list), method: :patch, class: "btn1" %>
+      </div><br />
+      <div class="delete">
+       <%= link_to "Erase this task", user_list_task_path(current_user.id), method: :delete, data:{confirm: "You want to delete this task?"}, class: "btn2"%>
+      </div><br />
+    <% else %>
+      <div class="task">
+        <p><%= @task.description %></p>
+      </div><br />
+      <div class="complete">
+        <%= link_to "Mark as Complete", complete_user_list_task_path(current_user.id, @list), method: :patch, class: "btn1" %>
+      </div><br />
+      <div class="delete">
+        <%= link_to "Erase this task", user_list_task_path(current_user.id), method: :delete, data:{confirm: "You want to delete this task?"}, class: "btn2"%>
+      </div><br />
+    <% end %>
       <%= link_to "Edit your task data",  edit_user_list_task_path(current_user.id), class: "btn2"%>
-      <%= link_to "Erase your task data", user_list_task_path(current_user.id), method: :delete, data:{confirm: "You want to delete this task?"}, class: "btn2"%>
     </div>
     <%= link_to "back", user_list_path(current_user, @list.id), class: "btn" %>
   </div>
