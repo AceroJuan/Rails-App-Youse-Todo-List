@@ -1,7 +1,6 @@
 <div class="other_img">
   <div class="form_container">
     <a class="navbar-brand"><%= image_tag("youse_logo.png", size: "130x30", alt: "Youse") %></a>
-
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
