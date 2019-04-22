@@ -50,7 +50,7 @@
   text-decoration: none;
 }
 .welcome_img {
-  background-image: url("app/assets/images/youse_banner_01.jpg");
+  background-image: image-url("youse_banner_01.jpg");
   min-height: 87vh;
   min-width: 85vw;
   background-position: center center;
@@ -59,7 +59,7 @@
   position: relative;
 }
 .other_img {
-  background-image: url("app/assets/images/youse_banner02.jpg");
+  background-image: image-url("youse_banner02.jpg");
   min-height: 87vh;
   min-width: 85vw;
   background-position: center center;
